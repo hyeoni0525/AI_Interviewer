@@ -15,13 +15,10 @@ AI 면접관 Agent를 활용한 면접 컨설팅 시스템
 >  잡코리아 자료에 따르면 구직자 46%가 채용 절차 중 **면접**이 가장 어렵다고 답변, 특히 면접 영역에서 본인의 강점을 소개하는 질문이 37.5%로 면접 시 가장 어려운 질문에 선정 
 
 
-> **수험생 규모**
-> - 2024학년도 대학수학능력시험 응시생 수: 444,870명
-> - 출처 : 교육부 공식 블로그(https://if-blog.tistory.com/14688)
+> **취업준비생 규모**
+<img width="1999" height="799" alt="Image" src="https://github.com/user-attachments/assets/ae95f1d0-322c-44d1-b7d3-b893ae4b3a88" />
 
-> **취업준비생 규모** 
-> - 최근 고용동향 기준 취업준비자는 연간 60만 명 이상
-> - 출처 : 통계청, 「2025년 6월 고용동향」, https://mods.go.kr/board.es?mid=a10301030200&bid=210&act=view&list_no=437607
+> 출처 : 한국경제, (https://www.hankyung.com/article/202405083392g)
 
 
 ## 현재 시스템의 문제점
@@ -52,3 +49,33 @@ AI 면접관 Agent를 활용한 면접 컨설팅 시스템
 
 ## ✨ 핵심 기능
 > System Architecture
+<img width="1999" height="891" alt="Image" src="https://github.com/user-attachments/assets/3dfef8c5-2572-4d13-81f1-bbe52185aadb" />
+
+> **전체적인 AI 면접관 시스템 아키텍처**
+
+
+사용자가 Gradio를 통해 이력서를 업로드하면 백엔드에서 분석 및 질문 전략을 수립(사전 준비)하고, 이어지는 면접 단계에서 LangGraph 에이전트가 사용자의 응답을 실시간으로 평가 및 RAG 기반 심화 질문 생성을 반복하다가, 최종적으로 종합 피드백 보고서를 산출하는 전체 아키텍처를 시각화
+
+
+## 기술 스택
+
+| Category | 기술 | 설명 |
+| --- | --- | --- |
+| **RAG Framework** | LangGraph | 상태 기반 워크플로우 오케스트레이션 |
+| **Framework** | **LangChain & LangGraph** | State-based Agent Workflow Orchestration |
+| **LLM** | **OpenAI GPT-4o-mini** | Multimodal content understanding & Script generation |
+| **STT** | Whisper STT | Speech-to-Text  |
+| **TTS** | OpenAI TTS | Text-to-Speech (gpt-4o-mini-tts) |
+| **UI/UX** | Gradio | Web Interface for easy interaction |
+
+
+
+---
+## 📚 데이터
+> **단순 질문 리스트 대신, 지원자의 이력서 내용을 바탕으로 개인화된 면접 질문 생성**
+
+- **Source Data: 사용자 업로드 이력서 (PDF, DOCX)**
+- **생성 모델: GPT-4o-mini (속도 및 비용 효율성 고려) - GPT-4o 등 모델 교체 가능**
+- **질문 생성 프로세스 요약**
+
+
