@@ -16,7 +16,7 @@ AI 면접관 Agent를 활용한 면접 컨설팅 시스템
 
 
 > **취업준비생 규모**
-<img width="1999" height="799" alt="Image" src="https://github.com/user-attachments/assets/ae95f1d0-322c-44d1-b7d3-b893ae4b3a88" />
+<img width="1999" height="1299" alt="Image" src="https://github.com/user-attachments/assets/ae95f1d0-322c-44d1-b7d3-b893ae4b3a88" />
 
 > 출처 : 한국경제, (https://www.hankyung.com/article/202405083392g)
 
